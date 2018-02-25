@@ -1,0 +1,316 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" type="text/css" media="all" href="somafm.css" />
+<script src="somafm.js"></script>
+
+<body onload="StartClock();update_playlist()">
+
+<div class="topbar">
+<table id="titleArea" cellspacing="0" cellpadding="0" width="100%" style="cursor: arrow;">
+	<tr valign="bottom">
+		<td valign=middle>
+<div style="margin: 10px 10px;" class="nowplaying">NOW PLAYING <span id="nowplaying" style="font-weight: 100">&nbsp;</span></div>
+<div style="margin: 10px 10px;"><span onclick="pl_stop();" style="display: inline-block; font: 12pt 'Segoe UI', 'Helvetica Neue'; color: white; padding: 3pt 10pt; background-color: steelblue; cursor: hand; text-align: center;">&#x25a0;<br/>STOP</span></div>
+
+		</td>
+		<td id="theClock" width="250" align="right">
+			<div id="clockTime">&nbsp;</div>
+			<div id="clockDate">&nbsp;</div>
+		</td>
+	</tr>
+</table>
+</div>
+
+<div class="content">
+
+<div id="playtree">&nbsp;</div>
+
+
+<div>
+<!--
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=christmas.pls');" src="http://somafm.com/img/SantaLounge.jpg"  /></div>
+<div class="newtitle">Christmas Lounge</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=xmasrocks32.pls');" src="http://somafm.com/img/xmasrocks120.png" /></div>
+<div class="newtitle">Christmas Rocks!</div>
+</div>
+-->
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=lush.pls');" src="http://somafm.com/img/lush120.jpg"/></div>
+<div class="newtitle">Lush</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=groovesalad.pls');" src="http://somafm.com/img/GrooveSaladBox.jpg"/></div>
+<div class="newtitle">Groove Salad</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=secretagent.pls');" src="http://somafm.com/img/SecretAgentBox.jpg"/></div>
+<div class="newtitle">Secret Agent</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=illstreet48.pls');" src="http://somafm.com/img/illstreet.jpg"/></div>
+<div class="newtitle">Illinois Street Lounge</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/seventies.pls');" src="http://somafm.com/img/seventies400.jpg" /></div>
+<div class="newtitle">Left Coast 70s</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=u80s.pls');" src="http://somafm.com/img/u80s-120.png" alt="Underground 80s"/></div>
+<div class="newtitle">Underground 80s</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=suburbsofgoa.pls');" src="http://somafm.com/img/sog120.jpg"/></div>
+<div class="newtitle">Suburbs of Goa</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=events.pls');" src="http://somafm.com/img/defcon120.png" alt="DEF CON Radio"/></div>
+<div class="newtitle">DEF CON Radio</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=thetrip.pls');" src="http://somafm.com/img/thetrip120.jpg" alt="The Trip"/></div>
+<div class="newtitle">The Trip</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=dubstep.pls');" src="http://somafm.com/img/dubstep120.png" alt="Dub Step Beyond"/></div>
+<div class="newtitle">DubStep Beyond</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=missioncontrol.pls');" src="http://somafm.com/img/missioncontrol120.jpg"/></div>
+<div class="newtitle">Mission Control</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=spacestation.pls');" src="http://somafm.com/img/sss.jpg"/></div>
+<div class="newtitle">Space Station Soma</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/startstream=tags64.pls');" src="http://somafm.com/img/tagstrancefract.jpg"/></div>
+<div class="newtitle">Tag's Trip</div>
+</div>
+
+<div class="newstation">
+<div><<img onclick="in_play('http://somafm.com/startstream=cliqhop.pls');" src="http://somafm.com/img/cliqhop.gif"/></div>
+<div class="newtitle">cliqhop idm</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/deepspaceone.pls');" src="http://somafm.com/img3/deepspaceone-400.jpg" /></div>
+<div class="newtitle">Deep Space One</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/dronezone.pls');" src="http://somafm.com/img3/dronezone-400.jpg" /></div>
+<div class="newtitle">Drone Zone</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/fluid.pls');" src="http://somafm.com/img3/fluid-400.jpg" /></div>
+<div class="newtitle">Fluid</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/7soul.pls');" src="http://somafm.com/img3/7soul-400.jpg" /></div>
+<div class="newtitle">Seven Inch Soul</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/thistle.pls');" src="http://somafm.com/img3/thistle-400.jpg" /></div>
+<div class="newtitle">ThistleRadio</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/folkfwd.pls');" src="http://somafm.com/img3/folkfwd-400.jpg" /></div>
+<div class="newtitle">Folk Forward</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/bootliquor.pls');" src="http://somafm.com/img3/bootliquor-400.jpg" /></div>
+<div class="newtitle">Boot Liquor</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/digitalis.pls');" src="http://somafm.com/img3/digitalis-400.jpg" /></div>
+<div class="newtitle">Digitalis</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/poptron.pls');" src="http://somafm.com/img3/poptron-400.jpg" /></div>
+<div class="newtitle">Poptron</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/indiepop.pls');" src="http://somafm.com/img3/indiepop-400.jpg" /></div>
+<div class="newtitle">Indie Pop Rocks</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/bagel.pls');" src="http://somafm.com/img3/bagel-400.jpg" /></div>
+<div class="newtitle">BAGeL Radio</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/metal.pls');" src="http://somafm.com/img3/metal-400.png" /></div>
+<div class="newtitle">Metal Detector</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/sonicuniverse.pls');" src="http://somafm.com/img3/sonicuniverse-400.jpg" /></div>
+<div class="newtitle">Sonic Universe</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/beatblender.pls');" src="http://somafm.com/img3/beatblender-400.jpg" /></div>
+<div class="newtitle">Beat Blender</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/silent.pls');" src="http://somafm.com/img3/silent180.png" /></div>
+<div class="newtitle">The Silent Channel</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/brfm.pls');" src="http://somafm.com/img3/brfm-400.jpg" /></div>
+<div class="newtitle">Black Rock FM</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/earwaves.pls');" src="http://somafm.com/img3/earwaves-400.jpg" /></div>
+<div class="newtitle">Earwaves</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/covers.pls');" src="http://somafm.com/img3/covers-400.jpg" /></div>
+<div class="newtitle">Covers</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://somafm.com/doomed.pls');" src="http://somafm.com/img3/doomed-400.jpg" /></div>
+<div class="newtitle">Doomed</div>
+</div>
+
+<!--
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/world.pls');" src="/skyfm/world.png" alt="World Music" /></div>
+<div class="newtitle">World Music</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/classical.pls');" src="/skyfm/classical.png" alt="Mostly Classical" /></div>
+<div class="newtitle">Mostly Classical</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/solopiano.pls');" src="/skyfm/solopiano.png" alt="Solo Piano" /></div>
+<div class="newtitle">Solo Piano</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/newage.pls');" src="/skyfm/newage.png" alt="New Age" /></div>
+<div class="newtitle">New Age</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/vocalnewage.pls');" src="/skyfm/vocalnewage.png" alt="Vocal New Age" /></div>
+<div class="newtitle">Vocal New Age</div>
+</div>
+-->
+
+<!--
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/relaxation.pls');" src="/skyfm/relaxation.png" alt="Relaxation" /></div>
+<div class="newtitle">Relaxation</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/dreamscapes.pls');" src="/skyfm/dreamscapes.png" alt="Dreamscapes" /></div>
+<div class="newtitle">Dreamscapes</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/the80s.pls');" src="/skyfm/the80s.png" alt="Best of the 80s" /></div>
+<div class="newtitle">Best of the 80's</div>
+</div>
+-->
+
+<div class="newstation">
+<div><img onclick="in_play('http://icy1.abacast.com:80/kplu-newsjazzaac-64');" src="kplu.png" /></div>
+<div class="newtitle">KPLU (NPR)</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://live-aacplus-64.kexp.org/kexp64.aac');" src="kexp.png" /></div>
+<div class="newtitle">KEXP</div>
+</div>
+
+<!--
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/rootsreggae.pls');" src="/skyfm/rootsreggae.png" alt="Roots Reggae" /></div>
+<div class="newtitle">Roots Reggae</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/datempolounge.pls');" src="/skyfm/datempolounge.png" alt="DaTempo Lounge" /></div>
+<div class="newtitle">DaTempo Lounge</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/modernblues.pls');" src="/skyfm/modernblues.png" alt="Modern Blues" /></div>
+<div class="newtitle">Modern Blues</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/salsa.pls');" src="/skyfm/salsa.png" alt="Salsa" /></div>
+<div class="newtitle">Salsa</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/guitar.pls');" src="/skyfm/guitar.png" alt="Classical Guitar" />></div>
+<div class="newtitle">Classical Guitar</div>
+</div>
+-->
+
+<!--
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/jazzclassics.pls');" src="/skyfm/jazzclassics.png" alt="Jazz Classics" /></div>
+<div class="newtitle">Jazz Classics</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/smoothjazz.pls');" src="/skyfm/smoothjazz.png" alt="Smooth Jazz" /></div>
+<div class="newtitle">Smooth Jaz</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/uptemposmoothjazz.pls');" src="/skyfm/uptemposmoothjazz.png" alt="Uptempo Smooth Jazz" /></div>
+<div class="newtitle">Uptempo Smooth Jazz</div>
+</div>
+
+<div class="newstation">
+<div><img onclick="in_play('http://www.sky.fm/aacplus/pianojazz.pls');" src="/skyfm/pianojazz.png" alt="Piano Jazz" /></div>
+<div class="newtitle">Piano Jazz</div>
+</div>
+-->
+
+</div>
+
+
+<p id="wx"><a target="_blank" href="http://www.wunderground.com/US/WA/Woodinville.html?bannertypeclick=big2"><img src="http://weathersticker.wunderground.com/weathersticker/big2_cond/language/www/US/WA/Woodinville.gif" alt="Click for Woodinville, Washington Forecast" border="0" height="60" width="468" /></a></p>
+
+
+</div>
+</body>
