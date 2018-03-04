@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd ~/projects/ceiling
+git pull
+jekyll build
+sudo cp -R _site/* /var/www/html/ceiling
