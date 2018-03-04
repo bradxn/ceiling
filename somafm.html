@@ -1,3 +1,5 @@
+---
+---
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="stylesheet" type="text/css" media="all" href="somafm.css" />
 <script src="somafm.js"></script>
@@ -27,182 +29,19 @@
 <p><a href="rnet.html">RNet Controller</a></p>
 
 <div>
-<!--
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=christmas.pls');" src="http://somafm.com/img/SantaLounge.jpg"  /></div>
-<div class="newtitle">Christmas Lounge</div>
-</div>
 
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=xmasrocks32.pls');" src="http://somafm.com/img/xmasrocks120.png" /></div>
-<div class="newtitle">Christmas Rocks!</div>
-</div>
--->
+{% assign month = "now" | date: "%b" %}
 
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=lush.pls');" src="http://somafm.com/img/lush120.jpg"/></div>
-<div class="newtitle">Lush</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=groovesalad.pls');" src="http://somafm.com/img/GrooveSaladBox.jpg"/></div>
-<div class="newtitle">Groove Salad</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=secretagent.pls');" src="http://somafm.com/img/SecretAgentBox.jpg"/></div>
-<div class="newtitle">Secret Agent</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=illstreet48.pls');" src="http://somafm.com/img/illstreet.jpg"/></div>
-<div class="newtitle">Illinois Street Lounge</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/seventies.pls');" src="http://somafm.com/img/seventies400.jpg" /></div>
-<div class="newtitle">Left Coast 70s</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=u80s.pls');" src="http://somafm.com/img/u80s-120.png" alt="Underground 80s"/></div>
-<div class="newtitle">Underground 80s</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=suburbsofgoa.pls');" src="http://somafm.com/img/sog120.jpg"/></div>
-<div class="newtitle">Suburbs of Goa</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=events.pls');" src="http://somafm.com/img/defcon120.png" alt="DEF CON Radio"/></div>
-<div class="newtitle">DEF CON Radio</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=thetrip.pls');" src="http://somafm.com/img/thetrip120.jpg" alt="The Trip"/></div>
-<div class="newtitle">The Trip</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=dubstep.pls');" src="http://somafm.com/img/dubstep120.png" alt="Dub Step Beyond"/></div>
-<div class="newtitle">DubStep Beyond</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=missioncontrol.pls');" src="http://somafm.com/img/missioncontrol120.jpg"/></div>
-<div class="newtitle">Mission Control</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=spacestation.pls');" src="http://somafm.com/img/sss.jpg"/></div>
-<div class="newtitle">Space Station Soma</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/startstream=tags64.pls');" src="http://somafm.com/img/tagstrancefract.jpg"/></div>
-<div class="newtitle">Tag's Trip</div>
-</div>
-
-<div class="newstation">
-<div><<img onclick="in_play('http://somafm.com/startstream=cliqhop.pls');" src="http://somafm.com/img/cliqhop.gif"/></div>
-<div class="newtitle">cliqhop idm</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/deepspaceone.pls');" src="http://somafm.com/img3/deepspaceone-400.jpg" /></div>
-<div class="newtitle">Deep Space One</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/dronezone.pls');" src="http://somafm.com/img3/dronezone-400.jpg" /></div>
-<div class="newtitle">Drone Zone</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/fluid.pls');" src="http://somafm.com/img3/fluid-400.jpg" /></div>
-<div class="newtitle">Fluid</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/7soul.pls');" src="http://somafm.com/img3/7soul-400.jpg" /></div>
-<div class="newtitle">Seven Inch Soul</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/thistle.pls');" src="http://somafm.com/img3/thistle-400.jpg" /></div>
-<div class="newtitle">ThistleRadio</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/folkfwd.pls');" src="http://somafm.com/img3/folkfwd-400.jpg" /></div>
-<div class="newtitle">Folk Forward</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/bootliquor.pls');" src="http://somafm.com/img3/bootliquor-400.jpg" /></div>
-<div class="newtitle">Boot Liquor</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/digitalis.pls');" src="http://somafm.com/img3/digitalis-400.jpg" /></div>
-<div class="newtitle">Digitalis</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/poptron.pls');" src="http://somafm.com/img3/poptron-400.jpg" /></div>
-<div class="newtitle">Poptron</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/indiepop.pls');" src="http://somafm.com/img3/indiepop-400.jpg" /></div>
-<div class="newtitle">Indie Pop Rocks</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/bagel.pls');" src="http://somafm.com/img3/bagel-400.jpg" /></div>
-<div class="newtitle">BAGeL Radio</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/metal.pls');" src="http://somafm.com/img3/metal-400.png" /></div>
-<div class="newtitle">Metal Detector</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/sonicuniverse.pls');" src="http://somafm.com/img3/sonicuniverse-400.jpg" /></div>
-<div class="newtitle">Sonic Universe</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/beatblender.pls');" src="http://somafm.com/img3/beatblender-400.jpg" /></div>
-<div class="newtitle">Beat Blender</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/silent.pls');" src="http://somafm.com/img3/silent180.png" /></div>
-<div class="newtitle">The Silent Channel</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/brfm.pls');" src="http://somafm.com/img3/brfm-400.jpg" /></div>
-<div class="newtitle">Black Rock FM</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/earwaves.pls');" src="http://somafm.com/img3/earwaves-400.jpg" /></div>
-<div class="newtitle">Earwaves</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/covers.pls');" src="http://somafm.com/img3/covers-400.jpg" /></div>
-<div class="newtitle">Covers</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://somafm.com/doomed.pls');" src="http://somafm.com/img3/doomed-400.jpg" /></div>
-<div class="newtitle">Doomed</div>
-</div>
+{% for station in site.data.stations %}
+	{% if station.title contains "Christmas" and month != "Dec" %}
+		{% continue %}
+	{% endif %}
+	
+	<div class="newstation">
+		<div><img onclick="in_play('{{station.stream}}');" src="{{station.image}}"/></div>
+		<div class="newtitle">{{station.title}}</div>
+	</div>
+{% endfor %}
 
 <!--
 <div class="newstation">
@@ -247,16 +86,6 @@
 <div class="newtitle">Best of the 80's</div>
 </div>
 -->
-
-<div class="newstation">
-<div><img onclick="in_play('http://icy1.abacast.com:80/kplu-newsjazzaac-64');" src="kplu.png" /></div>
-<div class="newtitle">KPLU (NPR)</div>
-</div>
-
-<div class="newstation">
-<div><img onclick="in_play('http://live-aacplus-64.kexp.org/kexp64.aac');" src="kexp.png" /></div>
-<div class="newtitle">KEXP</div>
-</div>
 
 <!--
 <div class="newstation">
