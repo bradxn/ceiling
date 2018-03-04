@@ -27,7 +27,7 @@
         "stream": "https://c1.prod.playlists.ihrhls.com/4257/playlist.m3u8?listeningSessionID=5a5e26efc0873986_4078751_jI2x7JiT__000000cakU2&downloadSessionID=0&at=0&clientType=web&fb_broadcast=0&init_id=8169&modTime=1520198541986&pname=OrganicWeb&profileid=492141792&birthYear=null&territory=US&host=webapp.US&listenerId=1520197914317_47173&uid=1520197913994&age=null&gender=null&amsparams=playerid%3AiHeartRadioWebPlayer%3Bskey%3A1520198541&terminalid=159&awparams=g%3Anull%3Bn%3Anull%3Bccaud%3Aundefined%3BcompanionAds%3Atrue&playedFrom=324&devicename=web-desktop",
         "image": "https://i.iheart.com/v3/re/assets/images/3dc8bdbe-0b93-4322-bca1-045f75587ef4.png?ops=fit(480%2C480)",
         "title": "KISS FM 106.1"
-    }
+    },
 
     {
         "stream": "http://somafm.com/startstream=christmas.pls", 
