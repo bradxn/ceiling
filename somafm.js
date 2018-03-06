@@ -200,7 +200,7 @@ function update_playlist()
 function in_play(input)
 {
     loadXMLDoc( '/cgi-bin/mplayer.cgi?stop', parse_status );
-    loadXMLDoc( '/cgi-bin/mplayer.cgi?loadlist+'+input, parse_status );
+    loadXMLDoc( '/cgi-bin/mplayer.cgi?loadlist+' + encodeURIComponent(input), parse_status );
 /*
     loadXMLDoc( '/requests/status.xml?command=pl_stop', parse_status );
     loadXMLDoc( '/requests/status.xml?command=pl_empty', parse_status );
